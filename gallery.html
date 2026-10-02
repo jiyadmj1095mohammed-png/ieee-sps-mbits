@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IEEE SPS SBC MBITS Gallery — Photos from Signal 2.0, workshops, webinars, SPS Day celebrations, and chapter activities.">
+  <meta name="theme-color" content="#00629B">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gallery | IEEE SPS SBC MBITS">
+  <meta property="og:description" content="Photo gallery from IEEE Signal Processing Society Student Branch Chapter events at MBITS.">
+  <meta property="og:image" content="assets/img/og-default.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <title>Gallery | IEEE SPS SBC MBITS</title>
+</head>
+<body class="no-js">
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-busy="true" aria-label="Loading"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-text"></span>
+  </div>
+
+  <div class="page-wrapper">
+    <!-- Shared Navigation -->
+    <header class="site-header" id="site-nav" role="banner"></header>
+
+    <main class="main-content" id="main-content">
+      <!-- Page Hero -->
+      <section class="section section--hero" style="min-height: 50vh;" aria-labelledby="page-title">
+        <div class="hero-card" style="min-height: 50vh;">
+          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-content" style="min-height: 50vh; justify-content: center;">
+            <div class="hero-badge reveal" style="--i: 0">
+              <div class="hero-badge-dots" aria-hidden="true">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+              </div>
+              <span>Photo Gallery</span>
+            </div>
+            <h1 id="page-title" class="hero-headline reveal" style="--i: 1">
+              <span class="line">Gallery</span>
+              <span class="line accent">Moments</span>
+            </h1>
+            <p class="hero-subtext reveal" style="--i: 2">Relive the memories from Signal 2.0, workshops, SPS Day celebrations, and daily chapter life.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="section" aria-labelledby="gallery-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">Browse</span>
+            <h2 id="gallery-title" class="section-title reveal">Event Gallery</h2>
+            <p class="section-subtext reveal">Filter by event or browse all photos. Click any image to view in fullscreen.</p>
+          </header>
+
+          <!-- Filter Buttons -->
+          <div class="gallery-filters reveal" role="tablist" aria-label="Filter gallery by event" id="gallery-filters">
+            <!-- Filter buttons will be rendered by gallery.js -->
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Gallery images">
+            <!-- Gallery items will be rendered by gallery.js -->
+          </div>
+
+          <!-- Empty State -->
+          <div id="gallery-empty" class="text-center" style="display: none; padding: var(--space-16);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 64px; height: 64px; margin: 0 auto var(--space-4); color: var(--color-muted);" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-2);">No Images Found</h3>
+            <p class="muted">No photos available for this filter.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox (hidden by default) -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" tabindex="-1">
+        <button class="lightbox-close" aria-label="Close lightbox">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <button class="lightbox-nav prev" aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="lightbox-nav next" aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+        <div class="lightbox-content">
+          <img class="lightbox-image" src="" alt="" id="lightbox-image">
+        </div>
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+  </div>
+
+  <!-- Content Data -->
+  <script src="content/config.js"></script>
+  <script src="content/gallery.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/dist/split-type.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

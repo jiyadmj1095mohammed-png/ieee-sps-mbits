@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join IEEE SPS SBC MBITS — Membership benefits, dues, and application form. Access IEEE Xplore, attend exclusive workshops, and join a global network of signal processing professionals.">
+  <meta name="theme-color" content="#00629B">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Membership | IEEE SPS SBC MBITS">
+  <meta property="og:description" content="Join the IEEE Signal Processing Society Student Branch Chapter at MBITS. Student membership: $7 + $2 SPS dues.">
+  <meta property="og:image" content="assets/img/og-default.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <title>Membership | IEEE SPS SBC MBITS</title>
+</head>
+<body class="no-js">
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-busy="true" aria-label="Loading"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-text"></span>
+  </div>
+
+  <div class="page-wrapper">
+    <!-- Shared Navigation -->
+    <header class="site-header" id="site-nav" role="banner"></header>
+
+    <main class="main-content" id="main-content">
+      <!-- Page Hero -->
+      <section class="section section--hero" style="min-height: 50vh;" aria-labelledby="page-title">
+        <div class="hero-card" style="min-height: 50vh;">
+          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-content" style="min-height: 50vh; justify-content: center;">
+            <div class="hero-badge reveal" style="--i: 0">
+              <div class="hero-badge-dots" aria-hidden="true">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+              </div>
+              <span>Join Us</span>
+            </div>
+            <h1 id="page-title" class="hero-headline reveal" style="--i: 1">
+              <span class="line">Become a</span>
+              <span class="line accent">Member</span>
+            </h1>
+            <p class="hero-subtext reveal" style="--i: 2">Join a global network of signal processing professionals. Access IEEE Xplore, attend exclusive workshops, and build your technical portfolio.</p>
+            <div class="hero-cta reveal" style="--i: 3">
+              <a href="#join-form" class="btn btn--primary btn--lg btn--magnetic" data-transition="page">
+                <span>Apply Now</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="section" aria-labelledby="benefits-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">Why Join</span>
+            <h2 id="benefits-title" class="section-title reveal">Membership Benefits</h2>
+            <p class="section-subtext reveal">More than just a line on your resume — it's your gateway to the global signal processing community.</p>
+          </header>
+
+          <div class="grid-auto-fit" id="benefits-grid">
+            <!-- Benefits will be rendered by render.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Dues Section -->
+      <section class="section" style="background: var(--color-bg-elevated);" aria-labelledby="dues-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">Investment</span>
+            <h2 id="dues-title" class="section-title reveal">Membership Dues</h2>
+            <p class="section-subtext reveal">Student rates (verified annually). Pay directly via the IEEE Membership Dues Portal.</p>
+          </header>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto" id="dues-table">
+            <!-- Dues table will be rendered by render.js -->
+          </div>
+
+          <p class="text-center small reveal" style="margin-top: var(--space-6);">
+            <strong>Note:</strong> Rates are indicative. <a href="#" id="verify-dues-link" target="_blank" rel="noopener noreferrer">Verify current rates on the official IEEE Membership Dues Portal</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Join Form Section -->
+      <section class="section" aria-labelledby="form-title" id="join-form">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">Apply</span>
+            <h2 id="form-title" class="section-title reveal">Membership Application</h2>
+            <p class="section-subtext reveal">Fill out the form below. We'll email you payment instructions and next steps.</p>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Form -->
+            <div class="reveal">
+              <form id="membership-form" class="card" style="padding: var(--space-8);" novalidate>
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                  <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" placeholder=" " required autocomplete="name" aria-required="true">
+                    <span class="form-error" id="fullName-error" aria-live="polite"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder=" " required autocomplete="email" aria-required="true">
+                    <span class="form-error" id="email-error" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                  <div class="form-group">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" placeholder=" " required autocomplete="tel" aria-required="true">
+                    <span class="form-error" id="phoneNumber-error" aria-live="polite"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="department" class="form-label">Department</label>
+                    <select id="department" name="department" class="form-input" required aria-required="true">
+                      <option value="">Select Department</option>
+                      <option value="ECE">Electronics & Communication Engineering</option>
+                      <option value="EEE">Electrical & Electronics Engineering</option>
+                      <option value="CSE">Computer Science Engineering</option>
+                      <option value="ME">Mechanical Engineering</option>
+                      <option value="CE">Civil Engineering</option>
+                      <option value="OTHER">Other</option>
+                    </select>
+                    <span class="form-error" id="department-error" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4);">
+                  <div class="form-group">
+                    <label for="yearOfStudy" class="form-label">Year of Study</label>
+                    <select id="yearOfStudy" name="yearOfStudy" class="form-input" required aria-required="true">
+                      <option value="">Select Year</option>
+                      <option value="1">First Year</option>
+                      <option value="2">Second Year</option>
+                      <option value="3">Third Year</option>
+                      <option value="4">Fourth Year</option>
+                      <option value="PG">Postgraduate</option>
+                      <option value="PhD">PhD</option>
+                    </select>
+                    <span class="form-error" id="yearOfStudy-error" aria-live="polite"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="existingIeeeMemberId" class="form-label">Existing IEEE Member ID (Optional)</label>
+                    <input type="text" id="existingIeeeMemberId" name="existingIeeeMemberId" class="form-input" placeholder=" " autocomplete="off">
+                    <span class="form-error" id="existingIeeeMemberId-error" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="reasonForJoining" class="form-label">Why do you want to join SPS SBC?</label>
+                  <textarea id="reasonForJoining" name="reasonForJoining" class="form-input form-textarea" placeholder=" " rows="4"></textarea>
+                  <span class="form-error" id="reasonForJoining-error" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-checkbox">
+                    <input type="checkbox" id="consentToContact" name="consentToContact" class="form-checkbox-input" required aria-required="true">
+                    <span class="form-checkbox-box" aria-hidden="true"></span>
+                    <span class="form-checkbox-label">I consent to being contacted by IEEE SPS SBC MBITS regarding membership, events, and chapter activities. <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span>
+                  </label>
+                  <span class="form-error" id="consentToContact-error" aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--lg btn--magnetic" style="width: 100%; margin-top: var(--space-4);">
+                  <span class="btn-text">Submit Application</span>
+                  <span class="btn-loading" aria-hidden="true"></span>
+                </button>
+
+                <p class="small muted text-center" style="margin-top: var(--space-4);">By submitting, you agree to receive communication from IEEE SPS SBC MBITS. We respect your privacy.</p>
+              </form>
+
+              <!-- Success State (hidden by default) -->
+              <div id="form-success" class="card" style="padding: var(--space-8); text-align: center; display: none;">
+                <div style="width: 80px; height: 80px; margin: 0 auto var(--space-6); background: var(--gradient-success); border-radius: var(--radius-full); display: flex; align-items: center; justify-content: center; animation: scale-in var(--duration-slower) var(--ease-spring);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--color-bg)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;">
+                    <polyline points="20 6 9 17 4 12"/>
+                  </svg>
+                </div>
+                <h3 style="font-size: var(--text-2xl); margin-bottom: var(--space-3);">Application Submitted!</h3>
+                <p class="muted" style="margin-bottom: var(--space-6); max-width: 400px; margin-left: auto; margin-right: auto;">
+                  Thank you for your interest in joining IEEE SPS SBC MBITS. We've received your application and will email you at <strong id="success-email"></strong> with dues payment instructions and next steps within 2-3 business days.
+                </p>
+                <button type="button" id="form-reset" class="btn btn--secondary">Submit Another Application</button>
+              </div>
+            </div>
+
+            <!-- Info Sidebar -->
+            <div class="reveal" style="--i: 1">
+              <div class="card" style="padding: var(--space-6); height: fit-content; position: sticky; top: 100px;">
+                <h3 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">What Happens Next?</h3>
+                <ol style="list-style: none; display: flex; flex-direction: column; gap: var(--space-4);">
+                  <li style="display: flex; gap: var(--space-3); padding-left: var(--space-8); position: relative;">
+                    <span style="position: absolute; left: 0; top: 0; font-family: var(--font-heading); font-size: var(--text-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); line-height: 1;">1</span>
+                    <div>
+                      <strong>Review</strong><br>
+                      <span class="small muted">Execom reviews your application within 2-3 business days.</span>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: var(--space-3); padding-left: var(--space-8); position: relative;">
+                    <span style="position: absolute; left: 0; top: 0; font-family: var(--font-heading); font-size: var(--text-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); line-height: 1;">2</span>
+                    <div>
+                      <strong>Payment</strong><br>
+                      <span class="small muted">You'll receive an email with IEEE dues portal link ($7 + $2 SPS).</span>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: var(--space-3); padding-left: var(--space-8); position: relative;">
+                    <span style="position: absolute; left: 0; top: 0; font-family: var(--font-heading); font-size: var(--text-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); line-height: 1;">3</span>
+                    <div>
+                      <strong>Confirmation</strong><br>
+                      <span class="small muted">Once payment is verified, you're officially a member!</span>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: var(--space-3); padding-left: var(--space-8); position: relative;">
+                    <span style="position: absolute; left: 0; top: 0; font-family: var(--font-heading); font-size: var(--text-xl); font-weight: var(--font-weight-bold); color: var(--color-primary); line-height: 1;">4</span>
+                    <div>
+                      <strong>Welcome</strong><br>
+                      <span class="small muted">Access to Slack, event invites, IEEE Collabratec, and Xplore.</span>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section" style="background: var(--color-bg-elevated);" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">FAQ</span>
+            <h2 id="faq-title" class="section-title reveal">Frequently Asked Questions</h2>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="faq-accordion">
+            <!-- FAQ items will be rendered by render.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);" aria-labelledby="final-cta-title">
+        <div class="container text-center">
+          <h2 id="final-cta-title" class="reveal" style="font-size: var(--text-3xl); margin-bottom: var(--space-4); color: var(--color-bg);">Ready to Start?</h2>
+          <p class="reveal lead" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto var(--space-8);">Join 188+ students exploring signal processing. Your journey starts with one click.</p>
+          <div class="reveal flex justify-center gap-4 flex-wrap">
+            <a href="#join-form" class="btn btn--primary btn--lg btn--magnetic" style="background: var(--color-accent); color: var(--color-bg); box-shadow: var(--shadow-glow-accent);">
+              Apply Now
+            </a>
+            <a href="mailto:ieeesbmbits@gmail.com" class="btn btn--outline btn--lg" style="border-color: var(--color-accent); color: var(--color-accent);">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+  </div>
+
+  <!-- Content Data -->
+  <script src="content/config.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/dist/split-type.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

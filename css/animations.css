@@ -1,0 +1,358 @@
+/* ==========================================================================
+   ANIMATIONS.CSS — Keyframes, Reveal Classes, Motion Utilities
+   ========================================================================== */
+
+/* --- Easing Variables (matching GSAP power3.out) --- */
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   KEYFRAMES
+   ========================================================================== */
+
+/* Fade + Rise */
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-rise-sm {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-rise-lg {
+  from { opacity: 0; transform: translateY(48px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide from sides */
+@keyframes slide-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Scale In */
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Draw Line (for SVG paths) */
+@keyframes draw-line {
+  from { stroke-dashoffset: var(--path-length, 1000); }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes draw-line-vertical {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Bounce (for scroll cue) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+/* Shooting Star / Pulse Line */
+@keyframes shooting-star {
+  0% { transform: translateX(-100%) translateY(0) scaleX(0); opacity: 0; }
+  10% { opacity: 1; transform: translateX(-80%) translateY(-20%) scaleX(1); }
+  90% { opacity: 1; transform: translateX(180%) translateY(-40%) scaleX(1); }
+  100% { opacity: 0; transform: translateX(200%) translateY(-50%) scaleX(0); }
+}
+
+/* Circuit Trace Pulse */
+@keyframes circuit-pulse {
+  0%, 100% { stroke-dashoffset: 0; opacity: 0.3; }
+  50% { stroke-dashoffset: 20; opacity: 0.8; }
+}
+
+/* Wave Motion */
+@keyframes wave-flow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+/* Glow Pulse */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 210, 255, 0.2), inset 0 0 15px rgba(0, 210, 255, 0.1); border-color: rgba(0, 210, 255, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(0, 210, 255, 0.45), 0 0 20px rgba(139, 92, 246, 0.3), inset 0 0 25px rgba(0, 210, 255, 0.2); border-color: rgba(0, 210, 255, 0.8); }
+}
+
+/* Gradient Text Shimmer */
+@keyframes gradient-text-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Utility classes */
+.float-element { animation: float 6s ease-in-out infinite; }
+.float-slow-element { animation: float-slow 8s ease-in-out infinite; }
+.glow-card { animation: glow-pulse 4s ease-in-out infinite; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00D2FF 40%, #FFB800 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-text-shift 6s ease infinite;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #FFB800 0%, #FFD700 50%, #00D2FF 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Page Transition Wipe */
+@keyframes page-wipe-in {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes page-wipe-out {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+/* Preloader Waveform Draw */
+@keyframes waveform-draw {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Checkmark Draw (Success) */
+@keyframes checkmark-draw {
+  from { stroke-dashoffset: 50; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Confetti Burst */
+@keyframes confetti-burst {
+  0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) rotate(var(--r)); opacity: 0; }
+}
+
+/* ==========================================================================
+   REVEAL CLASSES (CSS-based, for non-GSAP elements)
+   ========================================================================== */
+
+.reveal {
+  opacity: 0;
+  animation: fade-rise var(--duration-slower) var(--ease-out) forwards;
+}
+
+.reveal-sm { animation-name: fade-rise-sm; }
+.reveal-lg { animation-name: fade-rise-lg; }
+
+/* Stagger using CSS custom property --i */
+.reveal--stagger { animation-delay: calc(var(--i, 0) * 120ms); }
+
+/* Direction variants */
+.reveal-left { animation-name: slide-left; }
+.reveal-right { animation-name: slide-right; }
+.reveal-scale { animation-name: scale-in; }
+
+/* Split Text Reveal (for GSAP-split elements) */
+.split-reveal > * {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.split-reveal.is-visible > * {
+  animation: split-reveal-char var(--duration-slower) var(--ease-out) forwards;
+}
+
+@keyframes split-reveal-char {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Counter Animation (CSS fallback) */
+.counter {
+  --target: 0;
+  --current: 0;
+}
+
+@keyframes counter-up {
+  from { --current: 0; }
+  to { --current: var(--target); }
+}
+
+/* Clip Path Reveal (for images) */
+.clip-reveal {
+  clip-path: inset(100% 0 0 0);
+  animation: clip-reveal var(--duration-slower) var(--ease-out) forwards;
+}
+
+@keyframes clip-reveal {
+  to { clip-path: inset(0 0 0 0); }
+}
+
+/* Parallax Layer Base */
+.parallax-layer { will-change: transform; }
+
+/* Marquee Strip */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee:hover { animation-play-state: paused; }
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-2) var(--space-4);
+  white-space: nowrap;
+}
+
+.marquee-item svg { width: 20px; height: 20px; color: var(--color-muted); flex-shrink: 0; }
+.marquee-item span { font-size: var(--text-sm); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); }
+
+/* ==========================================================================
+   GSAP-SPECIFIC UTILITIES (applied via JS)
+   ========================================================================== */
+
+.gsap-reveal { opacity: 0; }
+.gsap-reveal.is-visible { opacity: 1; }
+
+.gsap-pin-spacer { pointer-events: none; }
+
+/* ScrollTrigger marker styles (dev only) */
+.gsap-marker { z-index: 9999 !important; }
+
+/* ==========================================================================
+   REDUCED MOTION OVERRIDES
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all keyframe animations */
+  @keyframes fade-rise { to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-rise-sm { to { opacity: 1; transform: translateY(0); } }
+  @keyframes fade-rise-lg { to { opacity: 1; transform: translateY(0); } }
+  @keyframes slide-left { to { opacity: 1; transform: translateX(0); } }
+  @keyframes slide-right { to { opacity: 1; transform: translateX(0); } }
+  @keyframes scale-in { to { opacity: 1; transform: scale(1); } }
+  @keyframes draw-line { to { stroke-dashoffset: 0; } }
+  @keyframes draw-line-vertical { to { transform: scaleY(1); } }
+  @keyframes pulse { to { opacity: 1; } }
+  @keyframes pulse-scale { to { transform: scale(1); } }
+  @keyframes bounce { to { transform: translateY(0); } }
+  @keyframes marquee { to { transform: translateX(0); } }
+  @keyframes marquee-reverse { to { transform: translateX(0); } }
+  @keyframes shooting-star { to { opacity: 0; transform: translateX(200%); } }
+  @keyframes circuit-pulse { to { opacity: 0.3; } }
+  @keyframes wave-flow { to { transform: translateX(0); } }
+  @keyframes float { to { transform: translateY(0); } }
+  @keyframes shimmer { to { background-position: 200% 0; } }
+  @keyframes page-wipe-in { to { transform: translateY(0); } }
+  @keyframes page-wipe-out { to { transform: translateY(100%); } }
+  @keyframes waveform-draw { to { stroke-dashoffset: 0; } }
+  @keyframes checkmark-draw { to { stroke-dashoffset: 0; } }
+  @keyframes confetti-burst { to { opacity: 0; } }
+  @keyframes split-reveal-char { to { opacity: 1; transform: translateY(0); } }
+  @keyframes counter-up { to { --current: var(--target); } }
+  @keyframes clip-reveal { to { clip-path: inset(0 0 0 0); } }
+  @keyframes faq-slide { to { opacity: 1; transform: translateY(0); } }
+
+  /* Instant final states */
+  .reveal,
+  .reveal-sm,
+  .reveal-lg,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .clip-reveal,
+  .split-reveal > * {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0 !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+
+  .marquee { animation: none; }
+
+  .timeline::before { transform: scaleY(1) !important; transition: none; }
+
+  .hero-bg-layer { transform: none !important; transition: none; }
+
+  .custom-cursor { display: none !important; }
+
+  .page-transition { display: none !important; }
+}
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+@media print {
+  .nav-bar,
+  .scroll-cue,
+  .hero-badge,
+  .hero-cta,
+  .footer-social,
+  .btn,
+  .gallery-filters,
+  .lightbox,
+  .page-transition,
+  .custom-cursor { display: none !important; }
+
+  .hero-card { margin: 0; border-radius: 0; box-shadow: none; border: none; }
+  .hero-content { min-height: auto; padding: var(--space-8); }
+  .site-footer { border-top: 1px solid #000; }
+
+  * { background: white !important; color: black !important; box-shadow: none !important; }
+  a { text-decoration: underline; }
+}

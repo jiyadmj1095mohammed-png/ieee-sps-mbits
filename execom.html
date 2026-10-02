@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IEEE SPS SBC MBITS Executive Committee — Meet the student leaders and faculty counselor driving the Signal Processing Society Student Branch Chapter.">
+  <meta name="theme-color" content="#00629B">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Execom | IEEE SPS SBC MBITS">
+  <meta property="og:description" content="Meet the executive committee of IEEE Signal Processing Society Student Branch Chapter at MBITS.">
+  <meta property="og:image" content="assets/img/og-default.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <title>Execom | IEEE SPS SBC MBITS</title>
+</head>
+<body class="no-js">
+  <!-- Page Transition Overlay -->
+  <div class="page-transition" aria-hidden="true"></div>
+
+  <!-- Preloader -->
+  <div class="preloader" aria-busy="true" aria-label="Loading"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <span class="cursor-text"></span>
+  </div>
+
+  <div class="page-wrapper">
+    <!-- Shared Navigation -->
+    <header class="site-header" id="site-nav" role="banner"></header>
+
+    <main class="main-content" id="main-content">
+      <!-- Page Hero -->
+      <section class="section section--hero" style="min-height: 50vh;" aria-labelledby="page-title">
+        <div class="hero-card" style="min-height: 50vh;">
+          <div class="hero-bg" aria-hidden="true"></div>
+          <div class="hero-content" style="min-height: 50vh; justify-content: center;">
+            <div class="hero-badge reveal" style="--i: 0">
+              <div class="hero-badge-dots" aria-hidden="true">
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+                <span class="hero-badge-dot"></span>
+              </div>
+              <span>Leadership Team</span>
+            </div>
+            <h1 id="page-title" class="hero-headline reveal" style="--i: 1">
+              <span class="line">Executive</span>
+              <span class="line accent">Committee</span>
+            </h1>
+            <p class="hero-subtext reveal" style="--i: 2">Meet the student leaders and faculty counselor driving innovation in signal processing at MBITS.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Execom Gallery Grid -->
+      <section class="section" aria-labelledby="execom-title">
+        <div class="container">
+          <header class="section-header reveal">
+            <span class="section-badge">Leadership Team</span>
+            <h2 id="execom-title" class="section-title reveal">Executive Committee Posters</h2>
+            <p class="section-subtext reveal">Meet our student leaders and faculty counselor driving signal processing excellence at MBITS.</p>
+          </header>
+
+          <div id="execom-container">
+            <!-- Execom poster grid rendered by render.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);" aria-labelledby="execom-cta-title">
+        <div class="container text-center">
+          <h2 id="execom-cta-title" class="reveal" style="font-size: var(--text-3xl); margin-bottom: var(--space-4); color: var(--color-bg);">Want to Lead?</h2>
+          <p class="reveal lead" style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto var(--space-8);">Elections happen annually. Join the chapter, contribute to events, and nominate yourself for the next Execom cycle.</p>
+          <div class="reveal flex justify-center gap-4 flex-wrap">
+            <a href="membership.html" class="btn btn--primary btn--lg btn--magnetic" data-transition="page" style="background: var(--color-accent); color: var(--color-bg); box-shadow: var(--shadow-glow-accent);">
+              Join SPS SBC
+            </a>
+            <a href="events.html" class="btn btn--outline btn--lg" data-transition="page" style="border-color: var(--color-accent); color: var(--color-accent);">
+              See What We Do
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared Footer -->
+    <footer class="site-footer" id="site-footer" role="contentinfo"></footer>
+  </div>
+
+  <!-- Content Data -->
+  <script src="content/config.js"></script>
+  <script src="content/execom.js"></script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/dist/split-type.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/motion.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/render.js"></script>
+</body>
+</html>
